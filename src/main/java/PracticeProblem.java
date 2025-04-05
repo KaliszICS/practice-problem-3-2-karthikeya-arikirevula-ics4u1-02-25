@@ -4,24 +4,21 @@ public class PracticeProblem {
 
 	}
 
-	public static void q1() {
-		//Write question 1 code here
+	public static int towerOfHanoi(int num) {
+		if (num < 3) { 
+			return -1;
+		}
+
+		return moveCalc(num); 
 	}
 
-	public static void q2() {
-		//Write question 2 code here
+	private static int moveCalc(int i) {
+		if (i == 1) { 
+			return 1;
+		}
+		else { 
+			int movesForNMinus1 = moveCalc(i - 1);
+			return 2 * movesForNMinus1 + 1;
+		}
 	}
-
-	public static void q3() {
-		//Write question 3 code here
-	}
-
-	public static void q4() {
-		//Write question 4 code here
-	}
-
-	public static void q5() {
-		//Write question 5 code here
-	}
-
 }
